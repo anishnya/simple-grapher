@@ -1,0 +1,47 @@
+# Scatter Plot Markers Demo Configuration
+# Shows different markers in scatter plots
+graph:
+  title: "Scatter Plot: Different Markers"
+  x_axis:
+    label: "X Value"
+    min: 0
+    max: 10
+  y_axis:
+    label: "Y Value"
+    min: -2
+    max: 2
+  style:
+    width: 12
+    height: 8
+    fonts:
+      title_size: 18
+      label_size: 14
+      legend_size: 12
+    grid:
+      show: true
+    line_style:
+      markers: ['o', 's', '^', 'v', 'D', 'h']  # Different markers for scatter
+      line_styles: ['-']  # Not used in scatter plots
+      auto_cycle: true
+      line_width: 2.0
+      marker_size: 12.0  # Larger markers for scatter plots
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Scatter Series 1"
+    - file: "generated_data_2"
+      label: "Scatter Series 2"
+    - file: "generated_data_3"
+      label: "Scatter Series 3"
+    - file: "generated_data_4"
+      label: "Scatter Series 4"
+    - file: "generated_data_5"
+      label: "Scatter Series 5"
+    - file: "generated_data_6"
+      label: "Scatter Series 6"
+
+output:
+  format: "png"
+  dpi: 300
+  save_path: "./output/scatter_markers_demo.png"

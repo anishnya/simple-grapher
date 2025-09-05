@@ -1,0 +1,43 @@
+# Scatter Plot Defaults Configuration
+# Shows default behavior for scatter plots
+graph:
+  title: "Scatter Plot Defaults"
+  x_axis:
+    label: "X Value"
+    min: 0
+    max: 10
+  y_axis:
+    label: "Y Value"
+    min: -2
+    max: 2
+  style:
+    width: 10
+    height: 6
+    fonts:
+      title_size: 16
+      label_size: 12
+      legend_size: 10
+    grid:
+      show: true
+    line_style:
+      markers: []  # No markers by default
+      line_styles: ['-']  # Not used in scatter plots
+      auto_cycle: true
+      line_width: 2.0
+      marker_size: 6.0
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Scatter 1"
+    - file: "generated_data_2"
+      label: "Scatter 2"
+    - file: "generated_data_3"
+      label: "Scatter 3"
+    - file: "generated_data_4"
+      label: "Scatter 4"
+
+output:
+  format: "png"
+  dpi: 300
+  save_path: "./output/scatter_defaults.png"

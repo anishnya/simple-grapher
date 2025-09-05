@@ -1,0 +1,24 @@
+repos:
+  # Python formatting only
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        language_version: python3
+        args: [--line-length=88]
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: [--profile=black, --line-length=88]
+
+  # Run tests
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Run pytest
+        entry: python3 -m pytest -q
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]

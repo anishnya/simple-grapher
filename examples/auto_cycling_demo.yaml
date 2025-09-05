@@ -1,0 +1,47 @@
+# Auto Cycling Demo Configuration
+# Shows automatic cycling through markers and line styles
+graph:
+  title: "Auto Cycling: Markers and Line Styles"
+  x_axis:
+    label: "Time"
+    min: 0
+    max: 10
+  y_axis:
+    label: "Value"
+    min: -2
+    max: 2
+  style:
+    width: 12
+    height: 8
+    fonts:
+      title_size: 18
+      label_size: 14
+      legend_size: 12
+    grid:
+      show: true
+    line_style:
+      markers: ['o', 's', '^', 'v', '<', '>', 'p', '*']  # 8 different markers
+      line_styles: ['-', '--', '-.', ':']  # 4 different line styles
+      auto_cycle: true  # Automatically cycles through all combinations
+      line_width: 2.5
+      marker_size: 8.0
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Series 1"
+    - file: "generated_data_2"
+      label: "Series 2"
+    - file: "generated_data_3"
+      label: "Series 3"
+    - file: "generated_data_4"
+      label: "Series 4"
+    - file: "generated_data_5"
+      label: "Series 5"
+    - file: "generated_data_6"
+      label: "Series 6"
+
+output:
+  format: "png"
+  dpi: 300
+  save_path: "./output/auto_cycling_demo.png"

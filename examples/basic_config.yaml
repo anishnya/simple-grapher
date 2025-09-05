@@ -1,0 +1,53 @@
+# Sample configuration file for Simple Grapher
+# This demonstrates how to configure graphs using YAML
+graph:
+  title: "Sample Data Visualization"
+
+  # Axis configuration
+  x_axis:
+    label: "Time (seconds)"
+    min: 0
+    max: 100
+
+  y_axis:
+    label: "Value"
+    min: 0
+    max: 50
+
+  # Styling options
+  style:
+    width: 10
+    height: 10
+
+    fonts:
+      title_size: 16
+      label_size: 12
+      legend_size: 10
+
+    grid:
+      show: true
+
+    # Line and marker styling
+    line_style:
+      markers: []  # No markers by default - clean solid lines
+      line_styles: ['-']  # Solid lines only by default
+      auto_cycle: true
+      line_width: 2.0
+      marker_size: 6.0
+
+# Data source configuration
+data:
+  sources:
+    - file: "ex1.csv"
+      label: "ex1"
+    - file: "ex2.csv"
+      label: "ex2"
+    - file: "ex3.csv"
+      label: "ex3"
+
+# Output configuration
+output:
+  format: "png"
+  dpi: 300
+  quality: "high"
+  save_path: "./output/graph.png"

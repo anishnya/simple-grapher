@@ -1,0 +1,43 @@
+# Manual Styling Demo Configuration
+# Shows controlled marker and line style selection
+graph:
+  title: "Manual Styling: Custom Markers and Lines"
+  x_axis:
+    label: "Time"
+    min: 0
+    max: 10
+  y_axis:
+    label: "Value"
+    min: -2
+    max: 2
+  style:
+    width: 12
+    height: 8
+    fonts:
+      title_size: 18
+      label_size: 14
+      legend_size: 12
+    grid:
+      show: true
+    line_style:
+      markers: ['D', 'h', 'p', 's']  # Diamond, hexagon, pentagon, square
+      line_styles: ['--', '-.', ':', '-']  # Dashed, dash-dot, dotted, solid
+      auto_cycle: false  # Manual control - each series gets specific style
+      line_width: 3.0
+      marker_size: 10.0
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Custom Series 1"
+    - file: "generated_data_2"
+      label: "Custom Series 2"
+    - file: "generated_data_3"
+      label: "Custom Series 3"
+    - file: "generated_data_4"
+      label: "Custom Series 4"
+
+output:
+  format: "png"
+  dpi: 300
+  save_path: "./output/manual_styling_demo.png"

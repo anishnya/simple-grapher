@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+"""
+Simple Grapher CLI wrapper script.
+
+This script allows you to call simple-grapher from anywhere in your system
+by adding this directory to your PATH or creating a symlink.
+"""
+
+import os
+import sys
+
+# Add the current directory to Python path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+# Import and run the CLI
+from simple_grapher.cli import main
+
+if __name__ == "__main__":
+    sys.exit(main())

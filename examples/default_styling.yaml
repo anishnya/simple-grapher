@@ -1,0 +1,43 @@
+# Default Styling Configuration
+# Clean solid lines with different colors, no markers
+graph:
+  title: "Default Styling Example"
+  x_axis:
+    label: "Time"
+    min: 0
+    max: 10
+  y_axis:
+    label: "Value"
+    min: -2
+    max: 2
+  style:
+    width: 10
+    height: 6
+    fonts:
+      title_size: 16
+      label_size: 12
+      legend_size: 10
+    grid:
+      show: true
+    line_style:
+      markers: []  # No markers - clean solid lines
+      line_styles: ['-']  # Solid lines only
+      auto_cycle: true  # Different colors for each series
+      line_width: 2.0
+      marker_size: 6.0
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Series 1"
+    - file: "generated_data_2"
+      label: "Series 2"
+    - file: "generated_data_3"
+      label: "Series 3"
+    - file: "generated_data_4"
+      label: "Series 4"
+
+output:
+  format: "png"
+  dpi: 300
+  save_path: "./output/default_styling.png"

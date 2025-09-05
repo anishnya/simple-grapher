@@ -1,0 +1,19 @@
+# Minimal YAML Configuration
+# Uses all defaults with minimal configuration
+graph:
+  title: "Minimal YAML Config"
+  x_axis:
+    label: "X Axis"
+  y_axis:
+    label: "Y Axis"
+
+data:
+  sources:
+    - file: "generated_data_1"
+      label: "Data 1"
+    - file: "generated_data_2"
+      label: "Data 2"
+
+output:
+  format: "png"
+  save_path: "./output/minimal_yaml.png"
